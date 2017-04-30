@@ -1,0 +1,69 @@
+﻿@model OutfitsApp.Models.Sho
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Shoes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ShoeBrand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShoeBrand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShoeStyle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShoeStyle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShoeColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShoeColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShoeSeason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShoeSeason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShoeOccasion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShoeOccasion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShoePhoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShoePhoto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ShoeID }) |
+
+    @Html.ActionLink("Delete", "Delete", new { id = Model.ShoeID })|
+
+    @Html.ActionLink("Back to List", "Index")
+</p>

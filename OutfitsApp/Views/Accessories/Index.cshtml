@@ -1,0 +1,30 @@
+﻿@model IEnumerable<OutfitsApp.Models.Accessory>
+
+@{
+    ViewBag.Title = "Our Accessories";
+}
+
+
+<h2>Our Accessories</h2>
+
+<p>
+    @Html.ActionLink("Upload your own", "Create")
+</p>
+<div class="row">
+    <div class="col-xs-6 col-md-4 col-lg-4">
+
+        @Html.DisplayNameFor(model => model.AccessoryPhoto)
+        
+
+
+</div>
+    </div>
+
+        @foreach (var item in Model)
+        {
+            
+                    <a href="@Url.Action("Details", new { id=item.AccessoriesID })"> <img src="@Html.DisplayFor(modelItem => item.AccessoryPhoto)" style="width:250px;height:250px;" /></a>
+               
+        }
+
+       

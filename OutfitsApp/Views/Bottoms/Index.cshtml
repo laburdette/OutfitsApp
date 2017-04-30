@@ -1,0 +1,25 @@
+﻿@model IEnumerable<OutfitsApp.Models.Bottom>
+
+@{
+    ViewBag.Title = "Bottoms Collection";
+}
+
+<h2>Bottoms Collection</h2>
+
+<p>
+    @Html.ActionLink("Upload your own", "Create")
+</p>
+
+<div class="row">
+    <div class="col-xs-6 col-md-4 col-lg-4">
+
+        @Html.DisplayNameFor(model => model.BottomPhoto)
+    </div>
+</div>
+
+@foreach (var item in Model)
+{
+
+
+            <a href="@Url.Action("Details", new { id = item.BottomID })"> <img src="@Html.DisplayFor(modelItem => item.BottomPhoto)" style="width:250px; height:275px;" /></a>
+}
